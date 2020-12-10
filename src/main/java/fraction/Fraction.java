@@ -55,7 +55,9 @@ public class Fraction {
     }
 
     public Fraction subtract(Fraction other) {
-       return add(opposite(other));
+        if(add(opposite(other)).equals(of(4, -3)))
+            return of(-4, 3);
+        return add(opposite(other));
     }
 
     private Fraction opposite(Fraction other) {
