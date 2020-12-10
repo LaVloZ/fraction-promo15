@@ -38,6 +38,7 @@ public class FractionSpec {
         }
 
         @Test
+        @DisplayName("Subtraction is adding the opposite")
         public void subtractTwoFractionWithTheDifferentDenominator() {
             assertEquals(Fraction.of(13, 30), Fraction.of(3, 5).subtract(Fraction.of(1, 6)));
         }
