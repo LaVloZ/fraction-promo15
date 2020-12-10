@@ -54,10 +54,8 @@ public class Fraction {
                 denominator * other.denominator);
     }
 
-    public Fraction subtract(Fraction fraction) {
-        if(fraction.equals(of(1, 6))) {
-            return of(13, denominator * fraction.denominator);
-        }
-        return add(of(-fraction.numerator,denominator));
+    public Fraction subtract(Fraction other) {
+        return of((numerator * other.denominator) +  (- other.numerator * denominator),
+                denominator * other.denominator);
     }
 }
