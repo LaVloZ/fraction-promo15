@@ -31,6 +31,10 @@ public class FractionSpec {
     }
 
     @Nested
+    class Multiplication{
+
+    }
+    @Nested
     class Subtraction {
 
         @Test
