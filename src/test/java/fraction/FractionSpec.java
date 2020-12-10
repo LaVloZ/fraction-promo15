@@ -35,7 +35,7 @@ public class FractionSpec {
 
         @Test
         public void zeroIsAbsorbentInMultiplication(){
-            assertEquals(Fraction.fromInt(0), Fraction.fromInt(0).multiply(Fraction.fromInt(0)));
+            assertEquals(Fraction.fromInt(0), Fraction.fromInt(0).multiply(Fraction.of(1, 2)));
         }
 
         @Test
