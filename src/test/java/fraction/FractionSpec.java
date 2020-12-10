@@ -44,7 +44,7 @@ public class FractionSpec {
         }
 
         @Test
-        public void testCCCCC(){
+        public void multiplyTheNumeratorsAndTheDenominators(){
             assertEquals(Fraction.of(15, 6), Fraction.of(3, 2).multiply(Fraction.of(5, 3)));
         }
 
