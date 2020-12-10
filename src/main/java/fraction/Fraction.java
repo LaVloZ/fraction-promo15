@@ -71,6 +71,6 @@ public class Fraction {
     public Fraction multiply(Fraction fromInt) {
         if(this.equals(ZERO))
             return ZERO;
-        return fromInt(2);
+        return fromInt(numerator);
     }
 }
