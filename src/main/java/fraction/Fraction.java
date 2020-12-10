@@ -22,7 +22,7 @@ public class Fraction {
 
     public static Fraction of(int numerator, int denominator) {
         final int gcd = gcd(numerator, denominator);
-        return new Fraction(numerator / gcd,denominator / gcd);
+        return new Fraction(numerator / gcd,denominator / gcd).normalize();
     }
 
     private static int gcd(int numerator, int denominator) {
@@ -45,7 +45,7 @@ public class Fraction {
     }
 
     public Fraction subtract(Fraction other) {
-        return add(other.opposite()).normalize();
+        return add(other.opposite());
     }
 
     @Override
