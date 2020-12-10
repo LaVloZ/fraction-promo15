@@ -55,6 +55,10 @@ public class Fraction {
     }
 
     public Fraction subtract(Fraction other) {
-       return add(of(- other.numerator, other.denominator));
+       return add(opposite(other));
+    }
+
+    private Fraction opposite(Fraction other) {
+        return of(- other.numerator, other.denominator);
     }
 }
