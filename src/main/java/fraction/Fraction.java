@@ -75,7 +75,10 @@ public class Fraction {
     public Fraction divide(Fraction other) {
         if(ZERO.equals(other))
             throw new IllegalArgumentException("Cannot divide by zero");
+        return multiply(invert(other));
+    }
 
-        return multiply(of(other.denominator, other.numerator));
+    private Fraction invert(Fraction other) {
+        return of(other.denominator, other.numerator);
     }
 }
