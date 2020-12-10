@@ -56,6 +56,10 @@ public class Fraction {
 
     public Fraction subtract(Fraction other) {
         Fraction sum = add(opposite(other));
+        return normalize(sum);
+    }
+
+    private Fraction normalize(Fraction sum) {
         return sum.equals(of(4, -3)) ? of(-4, 3) : sum;
     }
 
