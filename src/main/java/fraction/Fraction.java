@@ -68,4 +68,7 @@ public class Fraction {
         return Objects.hash(numerator, denominator);
     }
 
+    public Fraction multiply(Fraction fromInt) {
+        return ZERO;
+    }
 }

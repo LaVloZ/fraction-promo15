@@ -33,6 +33,10 @@ public class FractionSpec {
     @Nested
     class Multiplication{
 
+        @Test
+        public void test(){
+            assertEquals(Fraction.fromInt(0), Fraction.fromInt(0).multiply(Fraction.fromInt(0)));
+        }
     }
     @Nested
     class Subtraction {
