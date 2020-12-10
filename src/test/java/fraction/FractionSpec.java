@@ -16,7 +16,7 @@ public class FractionSpec {
     }
 
     @Test
-    public void normalize() {
+    public void isEqualToItsNormalizedForm() {
         assertEquals(Fraction.of(-4, 3), Fraction.of(4, -3));
     }
 
