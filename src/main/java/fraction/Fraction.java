@@ -55,6 +55,6 @@ public class Fraction {
     }
 
     public Fraction subtract(Fraction fraction) {
-        return add(of(-1,denominator));
+        return add(of(-fraction.numerator,denominator));
     }
 }
