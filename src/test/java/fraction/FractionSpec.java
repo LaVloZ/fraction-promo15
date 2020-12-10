@@ -31,6 +31,11 @@ public class FractionSpec {
         public void subtractTwoFractionWithTheSameDenominator() {
             assertEquals(Fraction.of(2, 5), Fraction.of(3, 5).subtract(Fraction.of(1, 5)));
         }
+
+        @Test
+        public void subtractTwoFractionWithTheDifferentDenominator() {
+            assertEquals(Fraction.of(13, 30), Fraction.of(3, 5).subtract(Fraction.of(1, 6)));
+        }
     }
 
     @Nested
