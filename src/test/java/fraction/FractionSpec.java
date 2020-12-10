@@ -17,7 +17,7 @@ public class FractionSpec {
 
     @Test
     public void normalize() {
-        assertEquals(Fraction.of(-4, 3), Fraction.of(2, -3).subtract(Fraction.of(2, 3)));
+        assertEquals(Fraction.of(-4, 3), Fraction.of(4, -3));
     }
 
     @Test
