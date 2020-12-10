@@ -31,6 +31,15 @@ public class FractionSpec {
     }
 
     @Nested
+    class Division{
+
+        @Test
+        public void test(){
+            assertThrows(IllegalArgumentException.class, () -> Fraction.of(1,2).divide(Fraction.fromInt(0)));
+        }
+    }
+
+    @Nested
     class Multiplication{
 
         @Test

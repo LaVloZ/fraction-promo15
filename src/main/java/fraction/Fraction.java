@@ -71,4 +71,8 @@ public class Fraction {
     public Fraction multiply(Fraction fraction) {
         return of(numerator * fraction.numerator, denominator * fraction.denominator);
     }
+
+    public Fraction divide(Fraction fromInt) {
+            throw new IllegalArgumentException("Cannot divide by zero");
+    }
 }
