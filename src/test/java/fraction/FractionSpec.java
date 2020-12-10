@@ -16,6 +16,11 @@ public class FractionSpec {
     }
 
     @Test
+    public void normalize() {
+        assertEquals(Fraction.of(-4, 3), Fraction.of(2, -3).subtract(Fraction.of(2, 3)));
+    }
+
+    @Test
     public void isEqualToItsSimplifiedForm(){
         assertEquals(Fraction.fromInt(1),Fraction.of(2,2));
     }
@@ -35,16 +40,6 @@ public class FractionSpec {
         @Test
         public void subtractTwoFractionWithTheDifferentDenominator() {
             assertEquals(Fraction.of(13, 30), Fraction.of(3, 5).subtract(Fraction.of(1, 6)));
-        }
-
-        @Test
-        public void subtractTwoFractionWithTheDifferentDenominator2() {
-            assertEquals(Fraction.of(-4, 3), Fraction.of(2, -3).subtract(Fraction.of(2, 3)));
-        }
-
-        @Test
-        public void subtractTwoFractionWithTheDifferentDenominator3() {
-            assertEquals(Fraction.fromInt(0), Fraction.of(-2, 3).subtract(Fraction.of(2, -3)));
         }
     }
 
