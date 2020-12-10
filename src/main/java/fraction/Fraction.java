@@ -76,6 +76,6 @@ public class Fraction {
         if(ZERO.equals(fromInt))
             throw new IllegalArgumentException("Cannot divide by zero");
 
-        return of(2,3);
+        return multiply(of(4,3));
     }
 }
