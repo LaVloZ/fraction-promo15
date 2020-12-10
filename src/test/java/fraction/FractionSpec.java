@@ -48,11 +48,9 @@ public class FractionSpec {
             assertEquals(Fraction.of(15, 6), Fraction.of(3, 2).multiply(Fraction.of(5, 3)));
         }
 
-
-
         @Test
         public void test4(){
-            assertEquals(Fraction.of(1, 4), Fraction.of(1, 2).multiply(Fraction.of(1, 2)));
+            assertEquals(Fraction.of(15, 6), Fraction.of(5, 3).multiply(Fraction.of(3, 2)));
         }
     }
     @Nested
