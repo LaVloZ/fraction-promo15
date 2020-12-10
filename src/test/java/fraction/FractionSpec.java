@@ -32,10 +32,6 @@ public class FractionSpec {
 
     @Nested
     class Subtraction {
-        @Test
-        public void subtractTwoFractionWithTheSameDenominator() {
-            assertEquals(Fraction.of(2, 5), Fraction.of(3, 5).subtract(Fraction.of(1, 5)));
-        }
 
         @Test
         @DisplayName("Subtraction is adding the opposite")
