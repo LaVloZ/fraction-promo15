@@ -49,8 +49,8 @@ public class FractionSpec {
         }
 
         @Test
-        public void test4(){
-            assertEquals(Fraction.of(15, 6), Fraction.of(5, 3).multiply(Fraction.of(3, 2)));
+        public void isCommutative(){
+            assertEquals(Fraction.of(3, 2).multiply(Fraction.of(5, 3)), Fraction.of(5, 3).multiply(Fraction.of(3, 2)));
         }
     }
     @Nested
