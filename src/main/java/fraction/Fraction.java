@@ -29,6 +29,10 @@ public class Fraction {
         return BigInteger.valueOf(numerator).gcd(BigInteger.valueOf(denominator)).intValue();
     }
 
+    private Fraction opposite() {
+        return of(- numerator, denominator);
+    }
+
     private Fraction normalize() {
         if(denominator < 0)
             return of(-numerator, -denominator);
@@ -41,12 +45,7 @@ public class Fraction {
     }
 
     public Fraction subtract(Fraction other) {
-        Fraction sum = add(opposite(other));
-        return sum.normalize();
-    }
-
-    private Fraction opposite(Fraction other) {
-        return of(- other.numerator, other.denominator);
+        return add(other.opposite()).normalize();
     }
 
     @Override
