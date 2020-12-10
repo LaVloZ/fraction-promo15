@@ -68,13 +68,11 @@ public class Fraction {
         return Objects.hash(numerator, denominator);
     }
 
-    public Fraction multiply(Fraction fraction) {
-        return of(numerator * fraction.numerator, denominator * fraction.denominator);
+    public Fraction multiply(Fraction other) {
+        return of(numerator * other.numerator, denominator * other.denominator);
     }
 
     public Fraction divide(Fraction other) {
-        if(ZERO.equals(other))
-            throw new IllegalArgumentException("Cannot divide by zero");
         return multiply(invert(other));
     }
 
