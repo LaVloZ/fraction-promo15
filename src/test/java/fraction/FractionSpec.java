@@ -43,7 +43,6 @@ public class FractionSpec {
             assertEquals(Fraction.of(2,3), Fraction.of(1,2).divide(Fraction.of(3,4)));
         }
 
-
     }
 
     @Nested

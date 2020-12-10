@@ -72,10 +72,10 @@ public class Fraction {
         return of(numerator * fraction.numerator, denominator * fraction.denominator);
     }
 
-    public Fraction divide(Fraction fromInt) {
-        if(ZERO.equals(fromInt))
+    public Fraction divide(Fraction other) {
+        if(ZERO.equals(other))
             throw new IllegalArgumentException("Cannot divide by zero");
 
-        return multiply(of(fromInt.denominator, fromInt.numerator));
+        return multiply(of(other.denominator, other.numerator));
     }
 }
