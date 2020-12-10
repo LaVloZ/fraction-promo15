@@ -59,8 +59,10 @@ public class Fraction {
         return normalize(sum);
     }
 
-    private Fraction normalize(Fraction sum) {
-        return sum.equals(of(4, -3)) ? of(-4, 3) : sum;
+    private Fraction normalize(Fraction fraction) {
+        if(fraction.denominator < 0)
+            return of(-fraction.numerator, -fraction.denominator);
+        return fraction;
     }
 
     private Fraction opposite(Fraction other) {
