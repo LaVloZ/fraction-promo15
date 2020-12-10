@@ -34,19 +34,21 @@ public class FractionSpec {
     class Multiplication{
 
         @Test
-        public void zeroIsAbsorbentInMultiplication(){
+        public void zeroIsTheAbsorbingElement(){
             assertEquals(Fraction.fromInt(0), Fraction.fromInt(0).multiply(Fraction.of(1, 2)));
         }
 
         @Test
-        public void test2(){
-            assertEquals(Fraction.fromInt(2), Fraction.fromInt(2).multiply(Fraction.fromInt(1)));
+        public void oneIsTheNeutralElement(){
+            assertEquals(Fraction.fromInt(2), Fraction.fromInt(1).multiply(Fraction.fromInt(2)));
         }
 
         @Test
-        public void test3(){
-            assertEquals(Fraction.fromInt(2), Fraction.fromInt(1).multiply(Fraction.fromInt(2)));
+        public void testCCCCC(){
+            assertEquals(Fraction.of(15, 6), Fraction.of(3, 2).multiply(Fraction.of(5, 3)));
         }
+
+
 
         @Test
         public void test4(){
