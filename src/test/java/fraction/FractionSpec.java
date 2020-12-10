@@ -47,6 +47,11 @@ public class FractionSpec {
         public void test3(){
             assertEquals(Fraction.fromInt(2), Fraction.fromInt(1).multiply(Fraction.fromInt(2)));
         }
+
+        @Test
+        public void test4(){
+            assertEquals(Fraction.of(1, 4), Fraction.of(1, 2).multiply(Fraction.of(1, 2)));
+        }
     }
     @Nested
     class Subtraction {

@@ -69,6 +69,6 @@ public class Fraction {
     }
 
     public Fraction multiply(Fraction fraction) {
-        return fromInt(numerator * fraction.numerator);
+        return of(numerator * fraction.numerator, denominator * fraction.denominator);
     }
 }
