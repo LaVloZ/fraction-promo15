@@ -35,6 +35,20 @@ public class Fraction {
         return this;
     }
 
+    public Fraction add(Fraction other) {
+        return of((numerator * other.denominator) + (other.numerator * denominator),
+                denominator * other.denominator);
+    }
+
+    public Fraction subtract(Fraction other) {
+        Fraction sum = add(opposite(other));
+        return sum.normalize();
+    }
+
+    private Fraction opposite(Fraction other) {
+        return of(- other.numerator, other.denominator);
+    }
+
     @Override
     public String toString() {
         if(this.denominator == 1)
@@ -55,17 +69,4 @@ public class Fraction {
         return Objects.hash(numerator, denominator);
     }
 
-    public Fraction add(Fraction other) {
-        return of((numerator * other.denominator) + (other.numerator * denominator),
-                denominator * other.denominator);
-    }
-
-    public Fraction subtract(Fraction other) {
-        Fraction sum = add(opposite(other));
-        return sum.normalize();
-    }
-
-    private Fraction opposite(Fraction other) {
-        return of(- other.numerator, other.denominator);
-    }
 }
