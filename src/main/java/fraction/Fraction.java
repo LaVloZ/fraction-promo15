@@ -29,6 +29,10 @@ public class Fraction {
         return BigInteger.valueOf(numerator).gcd(BigInteger.valueOf(denominator)).intValue();
     }
 
+    private Fraction invert() {
+        return of(denominator, numerator);
+    }
+
     private Fraction opposite() {
         return of(- numerator, denominator);
     }
@@ -46,6 +50,14 @@ public class Fraction {
 
     public Fraction subtract(Fraction other) {
         return add(other.opposite());
+    }
+
+    public Fraction multiply(Fraction other) {
+        return of(numerator * other.numerator, denominator * other.denominator);
+    }
+
+    public Fraction divide(Fraction other) {
+        return multiply(other.invert());
     }
 
     @Override
@@ -66,17 +78,5 @@ public class Fraction {
     @Override
     public int hashCode() {
         return Objects.hash(numerator, denominator);
-    }
-
-    public Fraction multiply(Fraction other) {
-        return of(numerator * other.numerator, denominator * other.denominator);
-    }
-
-    public Fraction divide(Fraction other) {
-        return multiply(invert(other));
-    }
-
-    private Fraction invert(Fraction other) {
-        return of(other.denominator, other.numerator);
     }
 }
