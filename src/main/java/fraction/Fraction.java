@@ -6,8 +6,8 @@ import java.util.Objects;
 public class Fraction {
 
     public static final Fraction ZERO = fromInt(0);
-    public final int numerator;
-    public final int denominator;
+    private final int numerator;
+    private final int denominator;
 
     private Fraction(int numerator, int denominator) {
         if(denominator == 0)
